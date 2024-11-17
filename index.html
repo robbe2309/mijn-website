@@ -1,0 +1,296 @@
+<!DOCTYPE html> 
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mijn Portfolio</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Basis CSS voor een kleurrijker ontwerp met technologische uitstraling */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #121212; /* Donkere achtergrond voor IT-thema */
+      color: #e0e0e0; /* Lichte tekstkleur voor contrast */
+    }
+
+    header {
+      background-color: #00bcd4; /* Frisse turquoise blauw-groene kleur */
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schaduw voor diepte-effect */
+    }
+
+    header img {
+      max-width: 120px; /* Kleinere logo om niet te veel ruimte in te nemen */
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    nav a {
+      color: #f9f9f9; /* Witte tekstkleur voor navigatie */
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a:hover {
+      color: #00ff8c; /* Neon groene hover kleur voor technologie gevoel */
+    }
+
+    main {
+      padding: 40px 10%;
+      background-color: #212121; /* Donkergrijze achtergrond voor content */
+    }
+
+    #introductie h2 {
+      color: #00bcd4; /* Blauwgroene titel voor de introductie */
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .project-details {
+      background-color: #2a2a2a; /* Grijze achtergrond voor projectdetails */
+      border: 1px solid #00bcd4; /* Blauwgroene rand om de projecten */
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .project-details:hover {
+      transform: scale(1.05); /* Kleine vergroting bij hover */
+    }
+
+    .project-details h2 {
+      color: #00ff8c; /* Neon groene kleur voor projecttitels */
+    }
+
+    .project-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background-color: #00bcd4; /* Zelfde blauwgroen als de header */
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    footer a {
+      color: #f9f9f9;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      color: #00ff8c; /* Neon groene hover kleur voor footer links */
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: 30px auto;
+      background-color: #333333; /* Donkergrijze achtergrond voor formulier */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    form label {
+      color: #00bcd4;
+      font-weight: bold;
+    }
+
+    form input, form textarea {
+      padding: 10px;
+      border: 1px solid #333;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+
+    form button {
+      padding: 10px;
+      background-color: #00bcd4; /* Blauwgroene knop */
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #00ff8c; /* Groene kleur bij hover voor de knop */
+    }
+
+    /* Responsieve designaanpassingen */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 26px;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 16px;
+      }
+      .project-details {
+        padding: 15px;
+      }
+      form {
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 20px;
+      }
+      .project-details {
+        font-size: 14px;
+      }
+      footer a {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/images/logo.png" alt="Logo"> <!-- Voeg je logo hier toe -->
+    <h1>Mijn Portfolio</h1>
+    <nav>
+      <a href="javascript:showProject('project1')">Project 1</a>
+      <a href="javascript:showProject('project2')">Project 2</a>
+      <a href="javascript:showProject('project3')">Project 3</a>
+      <a href="javascript:showProject('project4')">Project 4</a>
+      <a href="javascript:showProject('project5')">Project 5</a>
+      <a href="javascript:showProject('project6')">Project 6</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <!-- Introductie Tekst -->
+    <section id="introductie">
+      <h2>Welkom op mijn portfolio</h2>
+      <p>Hallo! Mijn naam is Robbe Roofthooft, en dit is mijn portfolio. Hier kunt u mijn werk en projecten bekijken die ik tijdens mijn studie heb voltooid. Elk project is een weerspiegeling van mijn groei en vaardigheden op het gebied van webontwikkeling en IT-oplossingen. Blader gerust door mijn werk, en aarzel niet om contact op te nemen als u vragen heeft of wilt samenwerken!</p>
+    </section>
+
+    <!-- Nieuwe Project Secties -->
+    <section id="project1" class="project-details">
+      <h2>Project 1: Webshop voor Kleinbedrijf</h2>
+      <img src="assets/images/project1.jpg" alt="Project 1">
+      <p>Een complete webshop gemaakt met een op maat gemaakte frontend en backend met betalingsintegraties.</p>
+      <p>Het project omvatte het ontwerp van een gebruiksvriendelijke interface en een veilige betalingservaring.</p>
+      <p>Technologieën zoals HTML, CSS, JavaScript, en PHP werden gebruikt voor de front-end en back-end ontwikkeling.</p>
+      <p>We implementeerden een database voor productbeheer en klantinformatie.</p>
+      <p>Het project verhoogde de verkoop en klanttevredenheid door een eenvoudig navigatiesysteem.</p>
+      <p>De webshop is volledig responsief en geoptimaliseerd voor mobiele apparaten.</p>
+    </section>
+    <section id="project2" class="project-details">
+      <h2>Project 2: Mobiele App Ontwikkeling</h2>
+      <img src="assets/images/project2.jpg" alt="Project 2">
+      <p>Een cross-platform mobiele app ontwikkeld met Flutter voor efficiënte gebruikerservaringen.</p>
+      <p>De app is ontworpen voor zowel Android als iOS, zodat het breed toegankelijk is voor verschillende gebruikers.</p>
+      <p>Flutter biedt snelle ontwikkeling met een natieve look en feel, waardoor de app soepel werkt op meerdere platforms.</p>
+      <p>We implementeerden interactieve elementen die gebruikers betrokken houden bij de app.</p>
+      <p>Daarnaast hebben we integratie met externe APIs toegevoegd voor real-time data.</p>
+      <p>Het project leidde tot een verhoogd aantal downloads en een positieve feedback van gebruikers.</p>
+    </section>
+    <section id="project3" class="project-details">
+      <h2>Project 3: Data-analyse Dashboard</h2>
+      <img src="assets/images/project3.jpg" alt="Project 3">
+      <p>Een dashboard gebouwd voor het visualiseren van complexe datasets met behulp van Python en Power BI.</p>
+      <p>Het dashboard maakt het gemakkelijk om gegevens te analyseren en inzichten te verkrijgen via interactieve grafieken en diagrammen.</p>
+      <p>We gebruikten Python voor data-verwerking en Power BI voor visualisatie en rapportage.</p>
+      <p>Het systeem maakt dynamische rapporten mogelijk die dagelijks kunnen worden bijgewerkt.</p>
+      <p>Het project werd geprezen vanwege de gebruikersvriendelijke interface en de hoge mate van aanpasbaarheid.</p>
+      <p>Het heeft bedrijven geholpen om beslissingen te nemen op basis van actuele data-inzichten.</p>
+    </section>
+    <section id="project4" class="project-details">
+      <h2>Project 4: Machine Learning Model</h2>
+      <img src="assets/images/project4.jpg" alt="Project 4">
+      <p>Ontwikkeld en getraind een model voor voorspellingen van klantgedrag met behulp van scikit-learn.</p>
+      <p>Het model gebruikt historische data om toekomstige aankopen te voorspellen en klanten te segmenteren.</p>
+      <p>Door gebruik te maken van machine learning-algoritmen, kan het model patronen in klantgedrag herkennen.</p>
+      <p>De nauwkeurigheid van het model wordt voortdurend verbeterd door iteratieve training en validatie.</p>
+      <p>Het project biedt bedrijven waardevolle inzichten om marketingstrategieën te optimaliseren.</p>
+      <p>Het model wordt nu gebruikt voor klantgerichte campagnes die de conversiepercentages verhogen.</p>
+    </section>
+    <section id="project5" class="project-details">
+      <h2>Project 5: SEO-optimalisatie</h2>
+      <img src="assets/images/project5.jpg" alt="Project 5">
+      <p>SEO-strategieën toegepast voor een website, resulterend in betere zoekresultaten en verhoogde verkeer.</p>
+      <p>We analyseerden de website en implementeerden on-page en off-page SEO-optimalisaties.</p>
+      <p>Het project omvatte het verbeteren van de laadtijd van de site en het optimaliseren van meta-tags.</p>
+      <p>Door gebruik te maken van zoekwoordenanalyse en backlink-building, verbeterde de site zijn ranking in zoekmachines.</p>
+      <p>Het resultaat was een aanzienlijke toename in organisch verkeer en zichtbaarheid op zoekmachines.</p>
+      <p>Het project verhoogde de conversies door meer gerichte bezoekers naar de website te leiden.</p>
+    </section>
+    <section id="project6" class="project-details">
+      <h2>Project 6: IoT Device Integratie</h2>
+      <img src="assets/images/project6.jpg" alt="Project 6">
+      <p>Geïntegreerde IoT-apparaten voor huisautomatisering, inclusief sensorconnectiviteit en aansturing.</p>
+      <p>Het project maakt gebruik van draadloze technologieën zoals Wi-Fi en Bluetooth voor communicatie tussen apparaten.</p>
+      <p>Gebruikers kunnen hun apparaten op afstand bedienen via een mobiele app of webinterface.</p>
+      <p>De integratie van sensoren helpt bij het monitoren van de omgeving, zoals temperatuur en luchtvochtigheid.</p>
+      <p>Het systeem is ontworpen om energie te besparen door automatisch apparaten in en uit te schakelen.</p>
+      <p>Het project biedt zowel gemak als kostenbesparing voor huishoudens en bedrijven die willen innoveren.</p>
+    </section>
+
+    <!-- Contact Sectie -->
+    <section id="contact">
+      <h2>Neem contact met mij op</h2>
+      <form>
+        <label for="name">Naam:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Bericht:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Verzenden</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 - Robbe Roofthooft</p>
+    <a href="https://www.instagram.com/jouwusername" target="_blank">Instagram</a> |
+    <a href="https://www.youtube.com/c/jouwkanaal" target="_blank">YouTube</a> |
+    <a href="https://www.facebook.com/jouwprofiel" target="_blank">Facebook</a>
+  </footer>
+
+  <script>
+    function showProject(projectId) {
+      // Verberg alle projectdetails
+      document.querySelectorAll('.project-details').forEach(detail => {
+        detail.style.display = 'none';
+      });
+      // Toon het geselecteerde project
+      document.getElementById(projectId).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

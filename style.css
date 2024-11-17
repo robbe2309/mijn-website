@@ -1,0 +1,73 @@
+/* style.css */
+
+/* Algemene stijlen */
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Main content */
+  main {
+    padding: 20px;
+  }
+  
+  /* Project Grid */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .project-grid img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  /* Project Details */
+  .project-details {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .project-details img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
+  }
+  
